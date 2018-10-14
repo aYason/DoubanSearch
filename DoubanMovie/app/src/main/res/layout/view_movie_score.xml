@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context="com.yason.doubanmovie.module.base.BaseActivity">
+
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="10dp"
+    android:textSize="10dp"
+    android:text="豆瓣评分" />
+
+  <TextView
+    android:id="@+id/score"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/movie_score_test"
+    android:textColor="#000000"
+    android:gravity="center_horizontal"
+    android:textStyle="bold"
+    android:textSize="25dp"/>
+
+  <me.zhanghai.android.materialratingbar.MaterialRatingBar
+    android:id="@+id/ratingbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxHeight="15dp"
+    android:minHeight="15dp"
+    android:layout_gravity="center_horizontal"
+    android:stepSize="0.1"
+    style="@style/Widget.MaterialRatingBar.RatingBar.Indicator" />
+
+  <TextView
+    android:id="@+id/evaluation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/movie_evaluation_test"
+    android:textSize="10dp"
+    android:gravity="center_horizontal"/>
+
+</merge>

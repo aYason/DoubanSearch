@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+  tools:context="com.yason.doubanmovie.module.base.BaseActivity">
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="#5b4b4b">
+    <ImageView
+      android:id="@+id/front_image_view"
+      android:src="@drawable/movie_front_image_test"
+      android:layout_width="160dp"
+      android:layout_height="220dp"
+      android:scaleType="centerInside"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="60dp"/>
+  </FrameLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:orientation="horizontal">
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="vertical"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="50dp">
+      <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_name_test"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="25dp" />
+      <TextView
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/movie_type_test" />
+      <TextView
+        android:id="@+id/release_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="@string/movie_release_date_test" />
+      <TextView
+        android:id="@+id/length"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="@string/movie_length_test" />
+    </LinearLayout>
+    <com.yason.doubanmovie.module.search.views.MovieScoreView
+      android:id="@+id/movie_score_view"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:background="#ffffff"
+      android:layout_margin="10dp"
+      android:elevation="10dp">
+    </com.yason.doubanmovie.module.search.views.MovieScoreView>
+  </LinearLayout>
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:alpha="10"
+    android:background="#efefef"/>
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="200dp">
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
+      android:layout_marginBottom="10dp"
+      android:paddingLeft="15dp"
+      android:paddingRight="15dp"
+      android:text="简介" />
+    <com.yason.doubanmovie.commonview.ExpandableTextView
+      android:id="@+id/description_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingLeft="15dp"
+      android:paddingRight="15dp"
+      android:textColor="#353535"
+      android:lineSpacingMultiplier="1.2"
+      android:text="@string/movie_description_test"
+      app:maxExpandLines="6"/>
+  </LinearLayout>
+
+</LinearLayout>
